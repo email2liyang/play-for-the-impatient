@@ -13,4 +13,16 @@ class ConfigController @Inject()(config: Configuration, cc: ControllerComponents
     val passWord = config.getOptional[String]("db.password").getOrElse("None")
     Ok(views.html.config(url, passWord, config))
   }
+
+  def echo() = Action {
+    Ok("hello world")
+  }
+
+  def notFound() = Action {
+    NotFound("not found")
+  }
+
+  def hello(to: String) = Action {
+    Ok(s"hello $to")
+  }
 }
