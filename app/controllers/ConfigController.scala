@@ -25,4 +25,8 @@ class ConfigController @Inject()(config: Configuration, cc: ControllerComponents
   def hello(to: String) = Action {
     Ok(s"hello $to")
   }
+
+  def redirect() = Action {
+    Redirect(routes.ConfigController.hello("bob"))
+  }
 }
