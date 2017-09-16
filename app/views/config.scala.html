@@ -1,0 +1,15 @@
+@(url: String, password: String, config: play.api.Configuration)
+
+@main("config page") {
+    <ul>
+        <li>
+        @url
+        </li>
+        <li>
+        @config.get[String]("db.username")
+        </li>
+        <li>
+        @password
+        </li>
+    </ul>
+}
