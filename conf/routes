@@ -15,6 +15,7 @@ POST        /json                controllers.ConfigController.json
 
 GET         /async/pi            controllers.AsyncController.asyncPi
 GET         /async/chunk         controllers.AsyncController.chunkedSource
+GET         /summarise           controllers.InjectedViewController.summarise
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
